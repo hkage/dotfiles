@@ -4,3 +4,5 @@
     - vars/external_vars.yml
   roles:
     - git
+    - fish
+    - screen

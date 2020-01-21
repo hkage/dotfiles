@@ -1,0 +1,5 @@
+- name: Install package
+  apt: name=fish state=present update_cache=yes force=yes
+  become: yes
+- name: Config file
+  template: src=config.fish.j2 dest=~/.config/fish/config.fish

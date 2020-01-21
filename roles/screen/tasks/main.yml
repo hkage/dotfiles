@@ -1,0 +1,6 @@
+---
+- name: Install package
+  apt: name=screen state=present
+  become: yes
+- name: Config file
+  template: src=screenrc.j2 dest=~/.screenrc
