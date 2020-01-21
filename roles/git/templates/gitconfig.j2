@@ -1,0 +1,41 @@
+[user]
+   name = {{ developer_name }}
+   email = {{ developer_email }}
+[github]
+    user = {{ github_user }}
+[core]
+   editor = vi
+   quotepath = false
+   excludesfile = {{ git_ignore_file }}
+	autocrlf = input
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[alias]
+   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+   st = status
+   ci = commit
+   co = checkout
+   br = branch
+   slog = log --pretty=format:'%ci %C(yellow)%h%Creset %C(bold blue)<%an>%Creset %s'
+   tlog = log --tags --simplify-by-decoration --pretty='format:%ai %d'
+   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+   dsf = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
+	branches = !legit branches
+	graft = !legit graft
+	harvest = !legit harvest
+	publish = !legit publish
+	unpublish = !legit unpublish
+	sprout = !legit sprout
+	sync = !legit sync
+	switch = !legit switch
+	resync = !legit resync
+[color]
+   branch = auto
+   diff = auto
+   interactive = auto
+   status = auto
+[push]
+    default = simple
+[credential]
+	helper = cache --timeout=3600
+[http]
+	sslverify = false

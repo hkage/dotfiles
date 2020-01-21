@@ -1,0 +1,4 @@
+# Git default variables
+
+git_ignore_file: "~/.gitignore"
+git_default_editor: "vim"
