@@ -1,8 +1,20 @@
 ---
 - name: Install package
   apt: name=git state=present
-  sudo: yes
+  become: yes
+  tags:
+    - git
 - name: Config file
   template: src=gitconfig.j2 dest=~/.gitconfig
+  tags:
+    - git
 - name: Ignore file
   template: src=gitignore.j2 dest={{ git_ignore_file }}
+  tags:
+    - git
+- name: Install diff-so-fancy
+  get_url:
+    url: https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
+    dest: /usr/local/bin/diff-so-fancy
+    mode: '0775'
+  become: yes
