@@ -1,0 +1,6 @@
+---
+- name: Install snap
+  apt: name=snapd state=present update_cache=yes force=yes
+  become: yes
+  tags:
+    - snap.install

@@ -1,0 +1,9 @@
+- import_tasks: install.yml
+  when: snap_install
+  tags:
+    - snap
+
+- import_tasks: modules.yml
+  when: snap_modules
+  tags:
+    - snap

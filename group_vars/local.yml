@@ -1,0 +1,22 @@
+developer_name: "Henning Kage"
+developer_email: "henning.kage@gmail.com"
+
+github_user: "hkage"
+
+pip_modules:
+    - ansible
+    - cookiecutter
+    - devpi-client
+    - Fabric
+    - httpie
+    - ipdb
+    - s3cmd
+    - tabview
+
+snap_modules:
+    - code
+    - insomnia
+    - jq
+    - micro
+    - poedit
+    - tree

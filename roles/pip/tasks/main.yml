@@ -1,0 +1,4 @@
+---
+- name: pip conf
+  template: src=pip.conf.j2 dest=/etc/pip.conf
+  become: yes

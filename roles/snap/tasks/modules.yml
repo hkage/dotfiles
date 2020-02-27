@@ -1,0 +1,4 @@
+---
+- name: Install snap modules
+  command: snap
+  with_items: '{{ snap_modules }}'
