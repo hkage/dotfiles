@@ -1,5 +1,9 @@
+---
 developer_name: "Henning Kage"
 developer_email: "henning.kage@gmail.com"
+
+user_home: "{{ '~' | expanduser }}"
+project_dir: "{{ user_home }}/Projekte"
 
 github_user: "hkage"
 

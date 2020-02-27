@@ -1,8 +1,9 @@
 ---
 - hosts: all
-  vars_files:
-    - vars/external_vars.yml
   roles:
     - git
     - fish
     - screen
+    #- python
+    - pip
+    - snap
