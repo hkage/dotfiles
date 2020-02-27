@@ -1,0 +1,3 @@
+# Base directories
+user_home: "{{ '~' | expanduser }}"
+project_dir: "{{ user_home }}/projects"

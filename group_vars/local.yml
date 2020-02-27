@@ -7,6 +7,11 @@ project_dir: "{{ user_home }}/Projekte"
 
 github_user: "hkage"
 
+apt_modules:
+    - git
+    - vagrant
+    - virtualbox
+
 pip_modules:
     - ansible
     - cookiecutter

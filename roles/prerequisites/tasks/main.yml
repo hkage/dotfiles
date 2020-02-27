@@ -1,5 +1,5 @@
 ---
-- name: Create directories
+- name: Create common directories
   file: path={{ item }} state=directory
   with_items:
     - "{{ project_dir }}"
