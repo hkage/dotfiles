@@ -1,0 +1,6 @@
+---
+- name: Install fish shell
+  apt: name=fish state=present update_cache=yes force=yes
+  become: yes
+  tags:
+    - fish.install

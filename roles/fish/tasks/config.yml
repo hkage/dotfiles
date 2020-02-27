@@ -1,0 +1,5 @@
+---
+- name: Copy config file
+  template: src=config.fish.j2 dest=~/.config/fish/config.fish
+  tags:
+    - fish.config

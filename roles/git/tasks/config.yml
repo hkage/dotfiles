@@ -1,0 +1,5 @@
+---
+- name: Config file
+  template: src=gitconfig.j2 dest=~/.gitconfig
+- name: Ignore file
+  template: src=gitignore.j2 dest=~/.gitignore
