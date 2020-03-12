@@ -8,6 +8,7 @@ project_dir: "{{ user_home }}/Projekte"
 github_user: "hkage"
 
 apt_modules:
+    - bat
     - git
     - vagrant
     - virtualbox
