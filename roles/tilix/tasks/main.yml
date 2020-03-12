@@ -1,0 +1,10 @@
+---
+- name: Install package
+  apt: name=tilix state=present
+  become: yes
+- name: Copy themes
+  copy:
+    src: "{{ item }}"
+    dest: "~/.config/tilix/schemes/"
+  with_fileglob:
+      - "*.json"

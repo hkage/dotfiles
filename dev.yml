@@ -1,9 +1,10 @@
 ---
 - hosts: all
   roles:
-    - git
-    - fish
-    - screen
+    #- git
+    #- fish
+    - tilix
+    #- screen
     #- python
-    - pip
-    - snap
+    #- pip
+    #- snap
